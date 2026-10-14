@@ -1,0 +1,31 @@
+/* Add Photos modal */
+.modal {
+  position: relative; width: min(600px, 100%); max-height: 100%; overflow-y: auto; border-radius: 22px; padding: 26px 22px 22px;
+  animation: rise .35s var(--ease) both; overscroll-behavior: contain;
+}
+.modal h2 { font-size: 2.1rem; padding-right: 44px; }
+.modal-x { position: absolute; top: 14px; right: 14px; }
+.modal-sub { margin: 4px 0 18px; color: var(--muted); }
+.dropzone {
+  display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 26px 16px; text-align: center; border-radius: 16px;
+  border: 1.5px dashed rgba(214,184,137,.4); background: rgba(255,255,255,.025); color: var(--gold); transition: background .25s, border-color .25s;
+}
+.dropzone.is-drag { background: rgba(214,184,137,.1); border-color: var(--gold); }
+.dropzone p { margin: 6px 0 0; color: var(--text); font-weight: 600; }
+.dropzone small { color: var(--muted); margin-bottom: 12px; }
+.errors { list-style: none; margin: 12px 0 0; padding: 12px; border-radius: 12px; display: grid; gap: 6px; background: rgba(240,120,110,.09); border: 1px solid rgba(240,120,110,.3); color: #f4b3ac; font-size: .85rem; }
+.errors li { display: flex; gap: 8px; align-items: flex-start; }
+.errors svg { flex: none; margin-top: 3px; }
+.previews { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 8px; max-height: 240px; overflow-y: auto; }
+.previews li { display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 12px; background: var(--glass); border: 1px solid var(--line); }
+.previews img { width: 56px; height: 56px; border-radius: 8px; object-fit: cover; flex: none; }
+.preview-fields { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.preview-fields input { width: 100%; min-height: 36px; padding: 0 10px; border-radius: 8px; background: rgba(0,0,0,.3); border: 1px solid var(--line); outline: 0; }
+.preview-fields input:focus { border-color: var(--gold); }
+.preview-fields small { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.field { display: grid; gap: 6px; margin-top: 16px; font-size: .85rem; color: var(--muted); }
+.field select { min-height: 46px; padding: 0 12px; border-radius: 12px; background: var(--elev); border: 1px solid var(--line); color: var(--text); font-size: 1rem; }
+.field select:focus { border-color: var(--gold); outline: 0; }
+.note { margin: 14px 0 0; font-size: .8rem; color: var(--muted); }
+.modal-actions { display: flex; flex-direction: column-reverse; gap: 8px; margin-top: 18px; }
+@media (min-width: 520px) { .modal { padding: 32px; } .modal-actions { flex-direction: row; justify-content: flex-end; } }
